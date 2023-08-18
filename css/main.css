@@ -9,6 +9,7 @@ html,body {
 
 /* Mise en page de l'en-tête */
 header {
+	animation: fadeIn 0.5s linear;/*Ajout d'annimation*/
     height: 40px;
     width: 100%;
     background-color: black;
@@ -61,10 +62,12 @@ section{
 }
 
 section article{
+	animation: slideInFromLeft 0.5s ease-out;/*Ajout d'annimation*/
 	width: 70%;
 	float: left;
 	box-sizing: border-box;
 	padding: 10px;
+	margin-bottom: 160px;
 }
 section article h2{
 	text-align: justify;
@@ -87,6 +90,7 @@ section article a:hover{
 	text-decoration: underline;
 }
 section aside{
+	animation:slideInFromRight 0.5s ease-out;/*Ajout d'annimation*/
 	margin-top: 20px;
 	box-sizing: border-box;
 	width: 30%;
@@ -114,6 +118,7 @@ section aside ul li a:hover{
 
 /* Mise en page du footer */
 footer{
+	animation: fadeIn 0.5s linear; /*Ajout d'annimation*/
 	color: white;
 	position: fixed;
 	bottom: 0;
@@ -149,4 +154,44 @@ footer address a {
 footer address a:hover{
 	text-decoration: none;
 	font-size: 14pt;
+}
+
+/* Ajout des @keyframes pour l'annimation */
+@keyframes fadeIn{
+	from { opacity:0; }
+	to { opacity:1; }
+}
+
+@keyframes slideInFromLeft{
+	from { transform:translateX(-100%); }
+	to { transform:translateX(0); }
+}
+
+@keyframes slideInFromRight{
+	from { transform:translateX(100%); }
+	to { transform:translateX(0); }
+}
+
+/* Animation du titre de nos partenaires */
+footer h3{
+	animation:rainbow 5s linear alternate infinite;
+}
+@keyframes rainbow{
+	0%{ color:red }
+	25%{ color:green }
+	50%{ color:yellow }
+	75%{ color:pink }
+	100%{ color:white }
+}
+
+/* Annimation - Au survol le lien "En savoir plus" de l'article doit se secouer de droite a gauche une fois */
+section article a:hover{
+	animation:wriggle 0.5s linear;
+	text-decoration:underline;
+}
+
+@keyframes wriggle{
+	0%,100%{ transform:translateX(0) }
+	25%,75%{ transform:translateX(-10px) }
+	50%{ transform:translateX(10px) }
 }

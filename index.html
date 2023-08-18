@@ -55,15 +55,18 @@
         </footer>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-            jQuery(document).ready(function($){
-                $("#open").click(function(){
-                $("header nav").addClass("open");
-                });
-                $("#close").click(function(){
-                $("header nav").removeClass("open");
-                });
-                });
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			jQuery(document).ready(function($){
+				
+				$("#open").click(function(){
+					$("header nav").addClass("open");
+				});
+				
+				$("#close").click(function(){
+					$("header nav").removeClass("open");
+				});
+			});
+		</script>
     </body>
 </html>

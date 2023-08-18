@@ -11,12 +11,14 @@
         <header>
             <h1>Mon site</h1>
             <nav>
+                <button id="close" href="#">×</button>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="tech.html">Tech</a></li>
                     <li><a href="science.html">Science</a></li>
                 </ul>
             </nav>
+            <button id="open" href="#"><img src="images/menu.png"/></button>
         </header>
 
 <!-- Page d'accueil, on retrouve un extrait du dernier article, son logo et son lien pour le consulter en entier. Puis des liens vers d'autres articles -->
@@ -53,6 +55,15 @@
         </footer>
 
 
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+            jQuery(document).ready(function($){
+                $("#open").click(function(){
+                $("header nav").addClass("open");
+                });
+                $("#close").click(function(){
+                $("header nav").removeClass("open");
+                });
+                });
+        </script>
     </body>
 </html>

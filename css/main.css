@@ -195,3 +195,42 @@ section article a:hover{
 	25%,75%{ transform:translateX(-10px) }
 	50%{ transform:translateX(10px) }
 }
+
+/* Ajout du RESPONSEVE, version tablette */
+@media screen and (max-width: 768px) {
+	header ul li a, section article p, section aside a {
+		font-size:1.2em;
+	}
+	section article{
+		width: 100%;
+		margin-bottom: 0px;
+	}
+	section article img {
+		max-width: 50%;
+	}
+	section aside{
+		width: 100%;
+		margin-bottom: 250px;
+	}
+}        
+
+/* Ajout du RESPONSEVE, version smartphone */
+@media screen and (max-width: 630px) {
+
+	header{
+		text-align: center;
+	}
+
+	header nav{
+		display: none;
+	}
+
+
+	section article{
+		margin-top: 40px;
+	}
+
+	section article img{
+		max-width: 100%;
+	}
+}        
